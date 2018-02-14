@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 180401813}
   - component: {fileID: 180401812}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -562,6 +562,22 @@ MonoBehaviour:
   ordersSkin: {fileID: 11400000, guid: df9e0d9bdc8ccf34b88e15daced7f980, type: 2}
   manpowerSkin: {fileID: 11400000, guid: 191c660090975b840a4c152dded32a9b, type: 2}
   selectionBox: {fileID: 11400000, guid: df8224c14d740324dbb2650c7ae788f9, type: 2}
+  mouseCursorSkin: {fileID: 11400000, guid: ee85db653e2406642a96cbaabb38031a, type: 2}
+  activeCursor: {fileID: 2800000, guid: 65529621c74b6a44d8938d569f12eb7f, type: 3}
+  selectCursor: {fileID: 2800000, guid: 65529621c74b6a44d8938d569f12eb7f, type: 3}
+  leftCursor: {fileID: 2800000, guid: 909e99d020400a649aba8623401b0b4f, type: 3}
+  rightCursor: {fileID: 2800000, guid: 42df73caba84a8948bf1fcfe15db0fbb, type: 3}
+  upCursor: {fileID: 2800000, guid: 338b018a5ca11ad4db2917a2a4ea1770, type: 3}
+  downCursor: {fileID: 2800000, guid: b3daee32fce8ec6488dd5584ae8dfca4, type: 3}
+  moveCursors:
+  - {fileID: 2800000, guid: 470067d7e2f2f4346941c35bc128e176, type: 3}
+  - {fileID: 2800000, guid: 2c666b5ce928c04469ee37741e74f180, type: 3}
+  attackCursors:
+  - {fileID: 2800000, guid: e9dfe361c396fe24895741e446b12e4a, type: 3}
+  - {fileID: 2800000, guid: b6b17bd80d235334b8b59c3465fec405, type: 3}
+  harvestCursors:
+  - {fileID: 2800000, guid: fdd1817ae170bad44b80e9d18d1c8dc9, type: 3}
+  - {fileID: 2800000, guid: c50ed6c2dafbfbb438535a92db84461f, type: 3}
 --- !u!1 &417008623
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,8 +665,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 516734006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.570312, y: 0.0078125, z: 2.125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2078093363}
@@ -658,8 +674,8 @@ Transform:
   - {fileID: 1090728166}
   - {fileID: 122961788}
   - {fileID: 1739977564}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1968407219}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &516734008
 MonoBehaviour:
@@ -674,10 +690,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: tank
   buildImage: {fileID: 0}
-  cost: 0
-  sellValue: 0
+  metalCost: 0
+  manpowerCost: 0
+  oilCost: 0
+  plasticCost: 0
+  conductivityCost: 0
+  armourValue: 0
   hitPoints: 0
   maxHitPoints: 0
+  powerCost: 0
+  armourtype: 0
+  moveSpeed: 0
+  rotateSpeed: 0
 --- !u!1 &532575928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,8 +1648,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1913545956}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4296875, y: 0.0078125, z: 2.125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1132711625}
@@ -1637,8 +1661,8 @@ Transform:
   - {fileID: 374917176}
   - {fileID: 142159868}
   - {fileID: 1886046000}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1968407219}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1913545958
 MonoBehaviour:
@@ -1653,10 +1677,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: factory
   buildImage: {fileID: 0}
-  cost: 0
-  sellValue: 0
+  metalCost: 0
+  manpowerCost: 0
+  oilCost: 0
+  plasticCost: 0
+  conductivityCost: 0
+  armourValue: 0
   hitPoints: 0
   maxHitPoints: 0
+  powerCost: 0
+  armourtype: 0
 --- !u!1 &1968407216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,8 +1740,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413491695}
+  - {fileID: 516734007}
+  - {fileID: 1913545957}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2078093362
 GameObject:
