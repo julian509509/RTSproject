@@ -7,7 +7,7 @@ public class SuperObject : MonoBehaviour {
 
     public string objectName;
     public Texture2D buildImage;
-    public int metalCost, manpowerCost, oilCost, plasticCost, conductivityCost, armourValue, hitPoints, maxHitPoints, powerCost;
+    public int metalCost, manpowerCost, oilCost, plasticCost, grapheneCost, powerCost, armourValue, hitPoints, maxHitPoints;
     public char armourtype;
 
     protected Bounds selectionBounds;

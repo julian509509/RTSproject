@@ -315,7 +315,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6f3b764d69dc4d04d8e2ce516d2dfaa3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -578,6 +578,13 @@ MonoBehaviour:
   harvestCursors:
   - {fileID: 2800000, guid: fdd1817ae170bad44b80e9d18d1c8dc9, type: 3}
   - {fileID: 2800000, guid: c50ed6c2dafbfbb438535a92db84461f, type: 3}
+  resources:
+  - {fileID: 2800000, guid: b5c98fac2d736c24eadbb0b13b04d1f1, type: 3}
+  - {fileID: 2800000, guid: 8aac31c02fa8a0340a21b57a5a16a0d8, type: 3}
+  - {fileID: 2800000, guid: 3a4d1767764c4a24591dcb4b260c0f1f, type: 3}
+  - {fileID: 2800000, guid: 2f247a6694d4c384da3e04f448044e52, type: 3}
+  - {fileID: 2800000, guid: 5f45924ea2e3f1b4e9dae75cee97e682, type: 3}
+  - {fileID: 2800000, guid: f2656cf30fa563a409fdf01e7975730f, type: 3}
 --- !u!1 &417008623
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,14 +701,14 @@ MonoBehaviour:
   manpowerCost: 0
   oilCost: 0
   plasticCost: 0
-  conductivityCost: 0
+  grapheneCost: 0
+  powerCost: 0
   armourValue: 0
   hitPoints: 0
   maxHitPoints: 0
-  powerCost: 0
   armourtype: 0
-  moveSpeed: 0
-  rotateSpeed: 0
+  moveSpeed: 8
+  rotateSpeed: 2
 --- !u!1 &532575928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,11 +1688,11 @@ MonoBehaviour:
   manpowerCost: 0
   oilCost: 0
   plasticCost: 0
-  conductivityCost: 0
+  grapheneCost: 0
+  powerCost: 0
   armourValue: 0
   hitPoints: 0
   maxHitPoints: 0
-  powerCost: 0
   armourtype: 0
 --- !u!1 &1968407216
 GameObject:
@@ -1729,6 +1736,13 @@ MonoBehaviour:
   username: julian
   human: 1
   hud: {fileID: 0}
+  startMetal: 0
+  startPower: 0
+  startManpower: 0
+  startOil: 0
+  startGraphene: 0
+  startPlastic: 0
+  startPowerLimit: 0
 --- !u!4 &1968407219
 Transform:
   m_ObjectHideFlags: 0
